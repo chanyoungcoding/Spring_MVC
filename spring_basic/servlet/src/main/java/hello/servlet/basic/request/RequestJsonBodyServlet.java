@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 /**
  *
- * http://localhost:8080/request-body-json
+ * <a href="http://localhost:8080/request-body-json">...</a>
  * JSON 형식 전송
  * content-type: application/json
  * message body: {"username": "hello", "age": 20}
@@ -22,7 +22,7 @@ import java.nio.charset.StandardCharsets;
 @WebServlet(name = "requestBodyJsonServlet", urlPatterns = "/request-body-json")
 public class RequestJsonBodyServlet extends HttpServlet {
 
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse  response) throws ServletException, IOException {
